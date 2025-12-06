@@ -1,3 +1,5 @@
+@use "../global" as *;
+
 .l-header {
   width: 100%;
   padding: 0 10px;
@@ -10,6 +12,9 @@
   width: 60px;
   height: 60px;
   z-index: 8000;
+  &h1{
+    line-height: 0;
+  }
   a {
     display: block;
     width: 100%;
@@ -17,6 +22,10 @@
       width: 100%;
       height: 100%;
     }
+  }
+  @include mq() {
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -65,15 +74,18 @@
       }
     }
   }
+//   desktopでは非表示
+  @include mq() {
+    display: none;
+  }
 }
-$shift-nav-width: -60vw;
-
-
+// menu-panelの大きさ
+$shift-nav-width: 60vw;
 .l-header-nav {
-  width: 60vw;
+  width: $shift-nav-width;
   position: fixed;
   top: 0;
-  right: $shift-nav-width;
+  right: -$shift-nav-width;
   height: 100vh;
   background-color: var(--color-bg-sub);
   transition: right 0.3s ease-in-out;
@@ -82,13 +94,30 @@ $shift-nav-width: -60vw;
   &.is-active {
     right: 0;
   }
+//   desktopでは通常のナビゲーションに変更
+  @include mq() {
+    width: auto;
+    position: relative;
+    height: auto;
+    top: auto;
+    right: auto;
+    background-color: var(--color-bg);
+  }
 }
 
+// ナビゲーションメニューのスタイル
 .l-header-nav-items {
   margin-top: 80px;
   width: fit-content;
   margin-inline: auto;
+  @include mq() {
+    margin: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+  }
 }
+// ナビゲーションメニューアイテムのスタイル
 .l-header-nav-item {
   font-size: 18px;
   margin-top: 60px;
@@ -118,7 +147,26 @@ $shift-nav-width: -60vw;
       top: calc(50% + 2px);
     }
   }
+//   desktopでは横並びに変更し余白調整
+  @include mq() {
+    margin-top: auto;
+    a {
+      padding: 0;
+      margin-right: 60px;
+      border-bottom: none;
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+    &:last-of-type {
+      a {
+        margin-right: 10px;
+      }
+    }
+  }
 }
+// 背景パネル
 .l-header-bgpannel {
   inset: 0;
   position: fixed;

@@ -53,27 +53,29 @@
   &.is-active {
     span {
       &:nth-of-type(1) {
-        transform: rotate(45deg);
-        top: 22px;
+        transform: rotate(135deg);
+        top: 24px;
       }
       &:nth-of-type(2) {
         opacity: 0;
       }
       &:nth-of-type(3) {
-        transform: rotate(-45deg);
-        top: 22px;
+        transform: rotate(-135deg);
+        top: 24px;
       }
     }
   }
 }
+$shift-nav-width: -60vw;
+
 
 .l-header-nav {
-  width: 50vw;
+  width: 60vw;
   position: fixed;
   top: 0;
-  right: -50vw;
+  right: $shift-nav-width;
   height: 100vh;
-  background-color: var(--color-white);
+  background-color: var(--color-bg-sub);
   transition: right 0.3s ease-in-out;
   z-index: 9000;
   transition: all 0.3s ease-in-out;
@@ -91,26 +93,30 @@
   font-size: 18px;
   margin-top: 60px;
   position: relative;
-  border-bottom: 1px solid var(--color-font);
-  &::before {
-    content: "";
-    width: 5px;
-    height: 1px;
-    background-color: var(--color-font);
-    transform: translateX(-50%) rotate(45deg);
-    position: absolute;
-    right: -10px;
-    top: calc(50% - 2px);
-  }
-  &::after {
-    content: "";
-    width: 5px;
-    height: 1px;
-    background-color: var(--color-font);
-    transform: translateX(-50%) rotate(-45deg);
-    position: absolute;
-    right: -10px;
-    top: calc(50% + 2px);
+  a {
+    display: block;
+    padding-right: 20px;
+    border-bottom: 1px solid var(--color-font);
+    &::before {
+      content: "";
+      width: 5px;
+      height: 1px;
+      background-color: var(--color-font);
+      transform: translateX(-50%) rotate(45deg);
+      position: absolute;
+      right: -10px;
+      top: calc(50% - 2px);
+    }
+    &::after {
+      content: "";
+      width: 5px;
+      height: 1px;
+      background-color: var(--color-font);
+      transform: translateX(-50%) rotate(-45deg);
+      position: absolute;
+      right: -10px;
+      top: calc(50% + 2px);
+    }
   }
 }
 .l-header-bgpannel {
@@ -118,9 +124,11 @@
   position: fixed;
   visibility: hidden;
   opacity: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 8500;
   &.is-active {
     visibility: visible;
-    opacity: 0.8;
-    background-color: #333;
+    opacity: 1;
+    background-color: var(--color-font);
   }
 }

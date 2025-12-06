@@ -5,8 +5,6 @@
 
 .top-about-inner {
   width: 100%;
-  //   display: flex;
-  //   justify-content: space-around;
 }
 
 .top-about-name {
@@ -45,6 +43,7 @@
   @include mq() {
     width: 60%;
     font-size: 20px;
+    line-height: 2;
     margin-right: 60px;
   }
 }
@@ -64,8 +63,6 @@
   }
 }
 
-.top-about-text {
-}
 .top-about-button {
   width: fit-content;
   margin: 0 auto;

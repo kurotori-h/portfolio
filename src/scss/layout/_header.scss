@@ -2,15 +2,15 @@
 
 .l-header {
   width: 100%;
-  padding: 0 10px;
+  padding: 0 10px 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
 }
 .l-header-logo {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   z-index: 8000;
   &h1{
     line-height: 0;
@@ -101,7 +101,7 @@ $shift-nav-width: 60vw;
     height: auto;
     top: auto;
     right: auto;
-    background-color: var(--color-bg);
+    background-color: transparent;
   }
 }
 
@@ -115,6 +115,7 @@ $shift-nav-width: 60vw;
     width: auto;
     display: flex;
     align-items: center;
+    
   }
 }
 // ナビゲーションメニューアイテムのスタイル
@@ -150,10 +151,16 @@ $shift-nav-width: 60vw;
 //   desktopでは横並びに変更し余白調整
   @include mq() {
     margin-top: auto;
+    
     a {
       padding: 0;
       margin-right: 60px;
       border-bottom: none;
+      text-shadow:
+           1px 1px 0px var(--color-bg), -1px -1px 0px var(--color-bg),
+          -1px 1px 0px var(--color-bg),  1px -1px 0px var(--color-bg),
+           1px 0px 0px var(--color-bg), -1px  0px 0px var(--color-bg),
+           0px 1px 0px var(--color-bg),  0px -1px 0px var(--color-bg);
       &::after,
       &::before {
         display: none;

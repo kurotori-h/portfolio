@@ -1,0 +1,72 @@
+@use "../global" as *;
+
+.top-about {
+}
+
+.top-about-inner {
+  width: 100%;
+  //   display: flex;
+  //   justify-content: space-around;
+}
+
+.top-about-name {
+  span {
+    display: block;
+  }
+}
+
+.top-about-name-en {
+  font-size: 28px;
+  font-family: var(--font-family-accent--en);
+  @include mq() {
+    font-size: 42px;
+  }
+}
+
+.top-about-name-ja {
+  font-family: var(--font-family-accent);
+  @include mq() {
+    font-size: 24px;
+  }
+}
+.top-about-desc {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include mq() {
+    flex-direction: row;
+  }
+}
+
+.top-about-desc-text {
+  letter-spacing: 0.2em;
+  text-align: justify;
+  @include mq() {
+    width: 60%;
+    font-size: 20px;
+    margin-right: 60px;
+  }
+}
+
+.top-about-logo {
+  margin-top: 20px;
+  width: 250px;
+  height: 250px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  @include mq() {
+    width: 40%;
+    height: auto;
+    flex-shrink: 0;
+  }
+}
+
+.top-about-text {
+}
+.top-about-button {
+  width: fit-content;
+  margin: 0 auto;
+}

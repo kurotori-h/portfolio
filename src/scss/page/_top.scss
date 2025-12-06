@@ -14,17 +14,18 @@ top > about
 }
 
 .top-about-name-en {
-  font-size: 28px;
+  font-size: var(--font-title);
   font-family: var(--font-family-accent--en);
   @include mq() {
-    font-size: 42px;
+    font-size: var(--font-title--pc);
   }
 }
 
 .top-about-name-ja {
   font-family: var(--font-family-accent);
+  font-size: var(--font-subtitle);
   @include mq() {
-    font-size: 24px;
+    font-size: var(--font-subtitle--pc);
   }
 }
 .top-about-desc {
@@ -71,31 +72,70 @@ top > about
 top > programming
 ----------------------------*/
 .top-programming {
-
 }
 
-
 .top-programming-title {
-
+  font-family: var(--font-family-accent--en);
+  font-size: var(--font-title);
 }
 
 .top-programming-subtitle {
-
+  font-family: var(--font-family-accent);
+  font-size: var(--font-subtitle);
 }
 
 .top-programming-container--works {
-
+  width: 100%;
+  height: 200px;
+  margin-top: 40px;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .top-programming-header {
-
+  background-color: var(--color-bg);
+  opacity: 0.8;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  &span {
+    opacity: 1;
+  }
 }
 
 .top-programming-thumbnail--works {
-
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("/img/top/thumbnail-works.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &:hover{
+    opacity: 1;
+  }
 }
 
 .top-programming-button {
-
+  background-color: var(--color-bg);
+  width: 100px;
+  border-radius: 15px 0 0 0;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
-

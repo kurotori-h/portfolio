@@ -149,7 +149,7 @@ top > programming
     background-image: url("/img/top/thumbnail-works.png");
   }
   &.--study {
-    background-image: url("/img/programing/main-visual--programing.png");
+    background-image: url("/img/programming/main-visual--programming.png");
   }
   background-size: cover;
   background-position: center;
@@ -222,8 +222,7 @@ top > muscle
 /*------------------------
 top > physics
 ----------------------------*/
-.top-physics {
-}
+
 
 .top-physics-title {
   font-size: var(--font-title);
@@ -248,11 +247,6 @@ top > physics
   }
 }
 
-.--classical {
-}
-
-.top-physics-content {
-}
 
 .top-physics-items {
   display: grid;

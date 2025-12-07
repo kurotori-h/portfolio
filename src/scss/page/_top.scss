@@ -65,7 +65,6 @@ top > about
 }
 
 .top-about-button {
-  width: fit-content;
   margin: 0 auto;
 }
 /*------------------------
@@ -342,12 +341,16 @@ top > physics
   }
 }
 .top-physics-button {
-  width: 100%;
-  display: inline-block;
+  margin: 0 auto;
   margin-top: 20px;
   font-size: 24px;
-  text-align: center;
+
   @include mq() {
     font-size: 34px;
+  }
+}
+.c-button {
+  @include mq() {
+    @include button-size(200px);
   }
 }

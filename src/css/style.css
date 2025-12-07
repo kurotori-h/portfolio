@@ -63,36 +63,42 @@ a:hover {
 }
 
 .c-button {
+  width: 150px;
   padding: 10px 20px;
+  text-align: center;
   position: relative;
+  width: calc(fit-content);
+}
+.c-button a {
+  width: 100%;
   display: inline-block;
 }
-.c-button::before {
+.c-button a::before {
   content: "";
   position: absolute;
   background-color: var(--color-font);
-  width: 150%;
+  width: 90%;
   height: 1px;
   bottom: 0px;
-  left: -20%;
+  left: 10%;
 }
-.c-button::after {
+.c-button a::after {
   content: "";
   position: absolute;
   width: 12px;
   height: 1px;
   background-color: var(--color-font);
-  right: -30%;
+  right: 0%;
   bottom: 4px;
   transform: rotate(45deg) translateY(-100%);
 }
-.c-button.--white {
+.c-button.--white a {
   color: var(--color-white);
 }
-.c-button.--white::before {
+.c-button.--white a::before {
   background-color: var(--color-white);
 }
-.c-button.--white::after {
+.c-button.--white a::after {
   background-color: var(--color-white);
 }
 
@@ -170,7 +176,6 @@ top > about
 }
 
 .top-about-button {
-  width: fit-content;
   margin: 0 auto;
 }
 
@@ -485,15 +490,19 @@ top > physics
 }
 
 .top-physics-button {
-  width: 100%;
-  display: inline-block;
+  margin: 0 auto;
   margin-top: 20px;
   font-size: 24px;
-  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .top-physics-button {
     font-size: 34px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .c-button {
+    width: 200px;
   }
 }
 
@@ -784,6 +793,22 @@ top > physics
   }
 }
 
+.u-horizon {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.u-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-black);
+  opacity: 0.1;
+  transition: all 0.3s ease;
+}
+.u-overlay:hover {
+  opacity: 0.5;
+}
+
 .u-box-main {
   margin-left: 50px;
   margin-right: 50px;
@@ -810,20 +835,4 @@ top > physics
 
 .u-pt80 {
   padding-top: 80px;
-}
-
-.u-horizon {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.u-overlay {
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-black);
-  opacity: 0.1;
-  transition: all 0.3s ease;
-}
-.u-overlay:hover {
-  opacity: 0.5;
 }/*# sourceMappingURL=style.css.map */

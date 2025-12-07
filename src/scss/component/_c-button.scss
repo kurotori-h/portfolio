@@ -1,35 +1,47 @@
 @use "../global" as *;
 
+// コンポーネントとして使うときはmixinでしてする。
+// <div class="c-button test">
+//     <a href="index.html">ホーム</a>
+// </div>
 .c-button {
+  @include button-size();
   padding: 10px 20px;
+  text-align: center;
   position: relative;
-  display: inline-block;
-  &::before {
-    content: "";
-    position: absolute;
-    background-color: var(--color-font);
-    width: 150%;
-    height: 1px;
-    bottom: 0px;
-    left: -20%;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    width: 12px;
-    height: 1px;
-    background-color: var(--color-font);
-    right: calc(-30%);
-    bottom: 4px;
-    transform: rotate(45deg) translateY(-100%);
-  }
-  &.--white {
-    color: var(--color-white);
+  width: calc(fit-content);
+  a {
+    width: 100%;
+    display: inline-block;
     &::before {
-      background-color: var(--color-white);
+      content: "";
+      position: absolute;
+      background-color: var(--color-font);
+      width: 90%;
+      height: 1px;
+      bottom: 0px;
+      left: 10%;
     }
     &::after {
-      background-color: var(--color-white);
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 1px;
+      background-color: var(--color-font);
+      right: 0%;
+      bottom: 4px;
+      transform: rotate(45deg) translateY(-100%);
+    }
+  }
+  &.--white {
+    a {
+      color: var(--color-white);
+      &::before {
+        background-color: var(--color-white);
+      }
+      &::after {
+        background-color: var(--color-white);
+      }
     }
   }
 }

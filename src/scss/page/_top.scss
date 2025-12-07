@@ -239,6 +239,10 @@ top > physics
 }
 
 .top-physics-container {
+  &.--modern,
+  .--math {
+    margin-top: 40px;
+  }
 }
 
 .--classical {
@@ -248,14 +252,97 @@ top > physics
 }
 
 .top-physics-items {
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
 .top-physics-item {
   width: 150px;
   height: 150px;
+  margin: 0 auto;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: bold;
+  font-family: var(--font-family-accent);
+  transition: all 0.3s ease;
+  color: var(--color-white);
+  text-shadow: 1px 1px 0 var(--color-black), 1px 0 0 var(--color-black), 1px 0 0 var(--color-black),
+    1px 0 0 var(--color-black);
+  @include mq() {
+    width: 300px;
+    height: 300px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+  &.--mechanics {
+    font-size: 30px;
+    background-color: red;
+    @include mq() {
+      font-size: 50px;
+    }
+  }
+  &.--electro-magnetics {
+    font-size: 24px;
+    background-color: rgb(255, 234, 0);
+    @include mq() {
+      font-size: 44px;
+    }
+  }
+  &.--thermo {
+    font-size: 28px;
+    background-color: green;
+    @include mq() {
+      font-size: 48px;
+    }
+  }
+  &.--relativity {
+    font-size: 28px;
+    background-color: purple;
+    @include mq() {
+      font-size: 48px;
+    }
+  }
+  &.--quantum {
+    font-size: 28px;
+    background-color: orange;
+    @include mq() {
+      font-size: 48px;
+    }
+  }
+  &.--statics {
+    font-size: 24px;
+    background-color: pink;
+    @include mq() {
+      font-size: 44px;
+    }
+  }
+  &.--solid-properties {
+    font-size: 24px;
+    background-color: teal;
+    @include mq() {
+      font-size: 44px;
+    }
+  }
+  &.--phy-math {
+    font-size: 28px;
+    background-color: blue;
+    @include mq() {
+      font-size: 48px;
+    }
+  }
+}
+.top-physics-button {
+  width: 100%;
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 24px;
+  text-align: center;
+  @include mq() {
+    font-size: 34px;
+  }
 }

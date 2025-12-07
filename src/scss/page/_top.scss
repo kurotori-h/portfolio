@@ -84,7 +84,7 @@ top > programming
   font-size: var(--font-subtitle);
 }
 
-.top-programming-container--works {
+.top-programming-container {
   width: 100%;
   height: 200px;
   margin-top: 40px;
@@ -115,17 +115,22 @@ top > programming
   }
 }
 
-.top-programming-thumbnail--works {
+.top-programming-thumbnail {
   width: 100%;
   height: 200px;
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("/img/top/thumbnail-works.png");
+  &.--works {
+    background-image: url("/img/top/thumbnail-works.png");
+  }
+  &.--study {
+    background-image: url("/img/programing/main-visual--programing.png");
+  }
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  &:hover{
+  &:hover {
     opacity: 1;
   }
 }

@@ -71,19 +71,30 @@ top > about
 /*------------------------
 top > programming
 ----------------------------*/
-.top-programming {
-}
+// .top-programming {
+// }
 
 .top-programming-title {
   font-family: var(--font-family-accent--en);
   font-size: var(--font-title);
+  @include mq() {
+    font-size: var(--font-title--pc);
+  }
 }
 
 .top-programming-subtitle {
   font-family: var(--font-family-accent);
   font-size: var(--font-subtitle);
+  @include mq() {
+    font-size: var(--font-subtitle--pc);
+  }
 }
-
+.top-programming-inner {
+  @include mq() {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .top-programming-container {
   width: 100%;
   height: 200px;
@@ -92,32 +103,47 @@ top > programming
   top: 0;
   left: 0;
   transition: all 0.3s ease;
+  // 要素の拡大と子要素の透明度を変化
   &:hover {
     transform: scale(1.1);
+    .top-programming-header {
+      opacity: 1;
+    }
   }
   a {
     display: block;
     width: 100%;
     height: 100%;
   }
+  @include mq() {
+    width: 90%;
+    height: 300px;
+    margin-inline: auto;
+    a {
+      border-radius: 15px;
+    }
+  }
 }
 
 .top-programming-header {
-  background-color: var(--color-bg);
-  opacity: 0.8;
+  background-color: var(--color-bg-sub);
+  opacity: 0;
   padding: 10px;
+  font-weight: var(--font-weight-medium);
   position: absolute;
   top: 0;
   left: 0;
   z-index: 10;
-  &span {
-    opacity: 1;
+  transition: all 0.3s ease;
+  @include mq() {
+    padding: 20px;
+    font-size: 24px;
   }
 }
 
 .top-programming-thumbnail {
   width: 100%;
-  height: 200px;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -140,7 +166,13 @@ top > programming
   width: 100px;
   border-radius: 15px 0 0 0;
   text-align: center;
+  font-weight: bold;
   position: absolute;
   right: 0;
   bottom: 0;
+  @include mq() {
+    width: 120px;
+    height: 40px;
+    font-size: 24px;
+  }
 }

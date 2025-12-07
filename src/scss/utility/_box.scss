@@ -1,0 +1,28 @@
+@use "../global" as *;
+// sectionの幅や余白
+.u-box-main {
+  margin-left: 50px;
+  margin-right: 50px;
+  @include mq() {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+}
+
+.u-mb-base {
+  margin-bottom: 40px;
+  @include mq() {
+    margin-bottom: 60px;
+  }
+}
+.u-mb60 {
+  margin-bottom: 60px;
+}
+.u-pt80 {
+  padding-top: 80px;
+}
+
+.u-horizon{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

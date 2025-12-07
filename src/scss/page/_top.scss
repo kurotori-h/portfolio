@@ -146,10 +146,10 @@ top > programming
   top: 0;
   left: 0;
   &.--works {
-    background-image: url("/img/top/thumbnail-works.png");
+    background-image: url("/portfolio/img/top/thumbnail-works.png");
   }
   &.--study {
-    background-image: url("/img/programming/main-visual--programming.png");
+    background-image: url("/portfolio/img/programming/main-visual--programming.png");
   }
   background-size: cover;
   background-position: center;
@@ -189,7 +189,7 @@ top > muscle
 .top-muscle-container {
   width: 100%;
   height: 100%;
-  background-image: url("/img/muscle/main-visual--muscle.png");
+  background-image: url("/portfolio/img/muscle/main-visual--muscle.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -223,7 +223,6 @@ top > muscle
 top > physics
 ----------------------------*/
 
-
 .top-physics-title {
   font-size: var(--font-title);
   font-family: var(--font-family-accent--en);
@@ -246,7 +245,6 @@ top > physics
     margin-top: 40px;
   }
 }
-
 
 .top-physics-items {
   display: grid;
